@@ -108,10 +108,8 @@ class Borad extends React.Component {
                 }
                 break;
             case 8:
-                if (this.state.value.length > 1)
-                    this.setState({ value: this.state.value.slice(0, -1) })
-                else
-                    this.setState({ value: '0' })
+              this.BackSpace();
+              break;
             case 13:
                 this.comPute();
                 break;
@@ -152,6 +150,7 @@ class Borad extends React.Component {
             case 'add':
                 this.state.output = parseFloat(this.state.numone) + parseFloat(this.state.numtwo);
                 // this.state.value=this.state.output;
+                
                 break;
             case 'subtract':
                 this.state.output = this.state.numone - this.state.numtwo;
@@ -163,9 +162,11 @@ class Borad extends React.Component {
                 this.state.output = this.state.numone / this.state.numtwo;
                 break;
             case 'pow':
-                this.state.output = Math.pow(this.state.numone, this.state.numtwo);
+                this.state.output = Math.pow(this.state.numone, this.state.numtwo)
+                break;
             default:
                 break;
+
         }
         this.setState({ value: this.state.output })
     }
