@@ -224,6 +224,9 @@ class Borad extends React.Component {
         this.inputRef.current.focus();
     }
     comPute() {
+        if(this.state.sign==''){
+            return false;
+        }
         this.inputRef.current.focus();
         this.state.numtwo = this.state.value;
         switch (this.state.sign) {
