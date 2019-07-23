@@ -12,9 +12,12 @@
     <style>
       
         button{
-            width: 50px;
-            height: 50px;
-            font-size: 16px
+            width: 80px;
+            height: 80px;
+            font-size: 16px;
+            background-color: darkgrey;
+            color: gainsboro;
+            
         }
         .numboard{
             float: left;
@@ -24,22 +27,36 @@
     
         h1{
             text-align: right;
-            width: 262px;
+            width: 405px;
             border: solid;
+            border-color: darkgrey;
             overflow: hidden;
+            color: white;
         }
         .sign4 button{
-            width: 100px;
+            width: 160px;
         }
    .focus{
        float: right;
        opacity: 0;
    }
-     
+   .board{
+       position: absolute;
+       left: 650px;
+       top: 250px;
+       border:solid;
+       border-color:gray;
+       background: darkgray
+   }
+   .signboard{
+       float: right;
+       position: absolute;
+       left: 250px;
+   }
+ 
     </style>
 </head>
 <body>
     <div id="root"></div>
-    <div id="show"></div>
 </body>
 </html>

@@ -108,8 +108,8 @@ class Borad extends React.Component {
                 }
                 break;
             case 8:
-              this.BackSpace();
-              break;
+                this.BackSpace();
+                break;
             case 13:
                 this.comPute();
                 break;
@@ -133,6 +133,86 @@ class Borad extends React.Component {
                 this.state.numone = this.state.value;
                 this.state.value = '0';
                 break;
+            case 48:
+                if (this.state.value == '0') {
+                    this.setState({ value: '0' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '0' })
+                }
+                break;
+            case 49:
+                if (this.state.value == '0') {
+                    this.setState({ value: '1' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '1' })
+                }
+                break;
+            case 50:
+                if (this.state.value == '0') {
+                    this.setState({ value: '2' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '2' })
+                }
+                break;
+            case 51:
+                if (this.state.value == '0') {
+                    this.setState({ value: '3' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '3' })
+                }
+                break;
+            case 52:
+                if (this.state.value == '0') {
+                    this.setState({ value: '4' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '4' })
+                }
+                break;
+            case 53:
+                if (this.state.value == '0') {
+                    this.setState({ value: '5' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '5' })
+                }
+                break;
+            case 54:
+                if (this.state.value == '0') {
+                    this.setState({ value: '6' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '6' })
+                }
+                break;
+            case 55:
+                if (this.state.value == '0') {
+                    this.setState({ value: '7' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '7' })
+                }
+                break;
+            case 56:
+                if (this.state.value == '0') {
+                    this.setState({ value: '8' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '8' })
+                }
+                break;
+            case 57:
+                if (this.state.value == '0') {
+                    this.setState({ value: '9' })
+                }
+                else {
+                    this.setState({ value: this.state.value + '9' })
+                }
+                break;
             default:
                 break;
         }
@@ -150,7 +230,7 @@ class Borad extends React.Component {
             case 'add':
                 this.state.output = parseFloat(this.state.numone) + parseFloat(this.state.numtwo);
                 // this.state.value=this.state.output;
-                
+
                 break;
             case 'subtract':
                 this.state.output = this.state.numone - this.state.numtwo;
@@ -159,7 +239,16 @@ class Borad extends React.Component {
                 this.state.output = this.state.numone * this.state.numtwo;
                 break;
             case 'divide':
+                if(this.state.numtwo==='0')
+                {
+                this.state.output="Wdnmd真就除0呀,重来！";
+                setTimeout(() => {
+                    this.cleAr()
+                }, 1000);
+                }
+                else{
                 this.state.output = this.state.numone / this.state.numtwo;
+                }
                 break;
             case 'pow':
                 this.state.output = Math.pow(this.state.numone, this.state.numtwo)
