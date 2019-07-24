@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/vue.js"></script>
+
+    <style>
+        .showscreen {
+            
+            text-align: right;
+            width: 405px;
+            border: solid;
+            border-color: darkgrey;
+            overflow: hidden;
+            color: white;
+        }
+
+        .board {
+            position: absolute;
+            left: 650px;
+            top: 250px;
+            border: solid;
+            border-color: gray;
+            background: darkgray
+        }
+
+        .numboard {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .signboard {
+            display: inline-block;
+
+        }
+
+        button {
+            width: 80px;
+            height: 80px;
+            font-size: 16px;
+            background-color: darkgrey;
+            color: gainsboro;
+            margin-right: -5px;
+
+        }
+
+        .signline4 button {
+            width: 160px
+        }
+
+        #focus {
+            opacity: 0;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+       
+        <div class="board" @keyup.103.55="numClick('7')" @keyup.104.56="numClick('8')" @keyup.105.57="numClick('9')"
+            @keyup.100.52="numClick('4')" @keyup.101.53="numClick('5')" @keyup.102.54="numClick('6')"
+            @keyup.97.49="numClick('1')" @keyup.98.50="numClick('2')" @keyup.99.51="numClick('3')"
+            @keyup.96.48="numClick('0')" @keyup.8="back" @keyup.13="compute" @keyup.106="signClick('multiply')"
+            @keyup.107="signClick('add')" @keyup.111="signClick('divide')" @keyup.109="signClick('subtract')" v-myfocus> 
+            <h1 class="showscreen">{{screen}}</h1>
+            <div class="numboard">
+                <div class="numline1">
+                    <button @click="numClick('7')">7</button>
+                    <button @click="numClick('8')">8</button>
+                    <button @click="numClick('9')">9</button>
+                </div>
+                <div class="numline2">
+                    <button @click="numClick('4')">4</button>
+                    <button @click="numClick('5')">5</button>
+                    <button @click="numClick('6')">6</button>
+                </div>
+                <div class="numline3">
+                    <button @click="numClick('1')">1</button>
+                    <button @click="numClick('2')">2</button>
+                    <button @click="numClick('3')">3</button>
+                </div>
+                <div class="numline4">
+                    <button @click="signClick('pow')">POW</button>
+                    <button @click="numClick('0')">0</button>
+                    <button id="focus" v-myfocus></button>
+                </div>
+
+            </div>
+            <div class="signboard">
+                <div class="signline1">
+                    <button @click="signClick('add')">+</button>
+                    <button @click="signClick('subtract')">-</button>
+
+                </div>
+                <div class="signline2">
+                    <button @click="signClick('multiply')">*</button>
+                    <button @click="signClick('divide')">/</button>
+                </div>
+                <div class="signline3">
+                    <button @click="compute">=</button>
+                    <button @click="reset">C</button>
+                </div>
+                <div class="signline4">
+                    <button @click="back">BackSpace</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        Vue.directive('myfocus', {
+            inserted: function (el, binding) {
+                //
+                el.focus()
+            }
+        })
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                screen: '0',
+                sign: '',
+                numone: '',
+                numtwo: '',
+            },
+            methods: {
+                numClick(value) {
+                    let obj = document.getElementById('focus')
+
+                    obj.focus();
+                    if (this.screen == '0') this.screen = value;
+                    else this.screen += value;
+
+                },
+                signClick(value) {
+                    let obj = document.getElementById('focus')
+
+                    obj.focus();
+                    this.sign = value;
+                    this.numone = this.screen;
+                    this.screen = '0';
+                },
+                reset() {
+                    this.screen = '0';
+                    this.numone = '';
+                    this.numtwo = '';
+                    this.sign = '';
+                    let obj = document.getElementById('focus')
+
+                    obj.focus();
+                },
+                back() {
+                    let obj = document.getElementById('focus')
+
+                    obj.focus();
+                    if (this.screen.length > 1) {
+                        this.screen = this.screen.slice(0, -1)
+                    }
+                    else {
+                        this.screen = '0';
+                    }
+                },
+                compute() {
+                    let obj = document.getElementById('focus')
+                    obj.focus();
+                    this.numtwo = this.screen;
+                    switch (this.sign) {
+                        case 'add':
+                            this.screen = parseFloat(this.numone) + parseFloat(this.numtwo)
+                            break;
+                        case 'subtract':
+                            this.screen = this.numone - this.numtwo;
+                            break;
+                        case 'multiply':
+                            this.screen = this.numone * this.numtwo;
+                            break;
+                        case 'divide':
+                            this.screen = this.numone / this.numtwo;
+                            break;
+                        case 'pow':
+                            this.screen = Math.pow(this.numone, this.numtwo)
+                            break;
+                        default:
+                            return false;
+                            break;
+                    }
+
+                }
+            },
+
+        })
+    </script>
+</body>
+
+</html>

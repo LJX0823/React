@@ -118,7 +118,7 @@ class Borad extends React.Component {
                 this.state.numone = this.state.value;
                 this.state.value = '0';
                 break;
-            case 191:
+            case 111:
                 this.setState({ sign: 'divide' })
                 this.state.numone = this.state.value;
                 this.state.value = '0';
