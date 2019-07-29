@@ -53,7 +53,7 @@ class StudyNote extends React.Component {
     )
     return (
       <div className="back">{list}
-        <PageButton totalpage={this.state.totalpage} current={this.state.current} pagesize={this.state.pagesize} pageNext={this.pageNext}></PageButton>
+        <PageButton {...this.state} pageNext={this.pageNext}></PageButton>
       </div>
     )
   }

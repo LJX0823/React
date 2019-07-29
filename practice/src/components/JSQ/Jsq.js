@@ -20,7 +20,7 @@ class Jsq extends Component {
     }
     handelClick(e) {
         // eslint-disable-next-line
-         if (this.state.value === '0') {     
+         if (this.state.value === '0') {
             this.setState({ value: e.target.value })
         }
         else
@@ -280,6 +280,9 @@ class Jsq extends Component {
                 break;
 
         }
+        if(this.state.output===0)
+        this.setState({value:'0'});
+        else
         this.setState({ value: this.state.output })
     }
     cleAr() {
@@ -301,7 +304,7 @@ class Jsq extends Component {
     render() {
 
         return (
-            <div className="board">
+            <div className="board" draggable="true">
                 <Show show={this.state.value} />
                 <div className="numboard" onKeyUp={this.keyUp}  >
                     <div className="line1" >
