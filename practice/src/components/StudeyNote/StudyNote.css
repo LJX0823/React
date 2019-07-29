@@ -1,0 +1,27 @@
+.tit{
+    font-size: 25px
+}
+.note{
+    margin: 20px auto;
+    width: 20%;
+    text-align: center;
+    border: solid;
+    border-color: #eef1f6;
+    border-width: thin;
+    background-color: #fff;
+    
+    
+}
+.author{
+    display: block;
+    margin-right: 0;
+    text-align: center;
+    
+}
+.back{
+    border: solid #eef1f6 ;
+    margin-top: 50px;
+    height: 450px;
+    background: lightsteelblue;
+    
+}

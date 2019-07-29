@@ -1,0 +1,47 @@
+button {
+    width: 80px;
+    height: 80px;
+    font-size: 16px;
+    background-color: darkgrey;
+    color: gainsboro;
+
+}
+
+.numboard {
+    float: left;
+    margin-right: 15px
+}
+
+
+h1 {
+    text-align: right;
+    width: 405px;
+    border: solid;
+    border-color: darkgrey;
+    overflow: hidden;
+    color: white;
+}
+
+.sign4 button {
+    width: 160px;
+}
+
+.focus {
+    float: right;
+    opacity: 0;
+}
+
+.board {
+    position: absolute;
+    left: 40%;
+    top: 25%;
+    border: solid;
+    border-color: gray;
+    background: darkgray
+}
+
+.signboard {
+    float: right;
+    position: absolute;
+    left: 250px;
+}
