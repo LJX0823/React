@@ -19,6 +19,7 @@ h1 {
     border: solid;
     border-color: darkgrey;
     overflow: hidden;
+    text-overflow: ellipsis;
     color: white;
 }
 
@@ -37,7 +38,7 @@ h1 {
     top: 25%;
     border: solid;
     border-color: gray;
-    background: darkgray
+    background: darkgray;
 }
 
 .signboard {

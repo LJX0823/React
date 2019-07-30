@@ -1,6 +1,8 @@
 import React from "react";
 import './StudyNote.css'
+import 'animate.css'
 import PageButton from "./PageButton";
+
 
 
 const studydata = [
@@ -9,7 +11,12 @@ const studydata = [
   { key: '03', title: 'Vue官方文档', author: '尤雨溪', url: 'https://cn.vuejs.org/' },
   { key: '04', title: 'Bootstrap中文网', author: 'Twitter', url: 'https://www.bootcss.com/' },
   { key: '05', title: 'Git 安装和使用教程', author: '懵懂的菜鸟', url: 'https://www.cnblogs.com/smuxiaolei/p/7484678.html' },
-  { key: '06', title: '冴羽的博客(Javascript文章)', author: '冴羽', url: 'https://github.com/mqyqingfeng/Blog?files=1' }
+  { key: '06', title: '冴羽的博客(Javascript文章)', author: '冴羽', url: 'https://github.com/mqyqingfeng/Blog?files=1' },
+  { key: '07', title: 'Github官网', author: 'Linux', url: 'https://github.com/' },
+  { key: '08', title: '一个优秀前端都应该阅读这些文章', author: '	Nealyang', url: 'https://github.com/Nealyang/PersonalBlog/issues/48' },
+  { key: '09', title: '什么是回流和重绘，有什么区别？', author: '你滴止痛药儿', url: 'https://www.jianshu.com/p/e081f9aa03fb' },
+  { key: '10', title: '更好的纯CSS滚动指示器技术实现', author: '张鑫旭', url: 'https://www.zhangxinxu.com/wordpress/2019/06/better-css-scroll-indicator/' },
+  { key: '11', title: 'word-break、word-wrap、white-space', author: '顾二凡', url: 'https://juejin.im/post/5b8905456fb9a01a105966b4' }
 ]
 
 class StudyNote extends React.Component {
@@ -29,10 +36,10 @@ class StudyNote extends React.Component {
   componentWillMount() {
     this.setState({
       totalpage: Math.ceil(this.state.totalDate.length / this.state.pagesize)
-    },function() {
+    }, function () {
       console.log(this.state.totalpage)
     })
-    
+
     this.pageNext(this.state.goValue);
   }
   pageNext(num) {
