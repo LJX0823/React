@@ -1,20 +1,16 @@
-.change_page span{
+
+.button,.change_page span{
     background: #fff;
     margin-right: 10px;
     border-color: #eef1f6;
     border-width: thin;
     font-size: 25px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
 }
+
 .button{
     cursor: pointer;
 }
-.change_page{
-    position:fixed;
-    top:55%;
-    left: 43.25%;
-    
-    
-    
+.change_page{ 
+    text-align: center;
 }

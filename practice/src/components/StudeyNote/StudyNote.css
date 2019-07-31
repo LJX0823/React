@@ -1,15 +1,16 @@
 .tit{
     font-size: 25px
+    
 }
 .note{
     margin: 20px auto;
-    width: 20%;
+    width: 450px;
+    height: 100%;
     text-align: center;
     border: solid;
     border-color: #eef1f6;
     border-width: thin;
     background-color: #fff;
-    
     
 }
 .author{
@@ -21,7 +22,9 @@
 .back{
     border: solid #eef1f6 ;
     margin-top: 50px;
-    height: 450px;
     background: lightsteelblue;
-    
+    position: relative;
+}
+.list{
+    position: relative;
 }
