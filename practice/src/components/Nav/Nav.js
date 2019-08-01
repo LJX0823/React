@@ -17,6 +17,7 @@ class Nav extends React.Component {
             <Menu.Item index="2-1"><Link to='/Jsq'>计算器</Link></Menu.Item>
             <Menu.Item index="2-2"><Link to='/StudyNote'>学习资料</Link></Menu.Item>
             <Menu.Item index="2-3"><Link to='/PhoneTest'>验证测试</Link></Menu.Item>
+            <Menu.Item index="2-4"><Link to='/Chooser'>选饭</Link></Menu.Item>
           </Menu.SubMenu>
           <Menu.Item index="3">关于</Menu.Item>
         </Menu>

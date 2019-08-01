@@ -17,7 +17,8 @@ const studydata = [
   { key: '09', title: '什么是回流和重绘，有什么区别？', author: '你滴止痛药儿', url: 'https://www.jianshu.com/p/e081f9aa03fb' },
   { key: '10', title: '更好的纯CSS滚动指示器技术实现', author: '张鑫旭', url: 'https://www.zhangxinxu.com/wordpress/2019/06/better-css-scroll-indicator/' },
   { key: '11', title: 'word-break、word-wrap、white-space', author: '顾二凡', url: 'https://juejin.im/post/5b8905456fb9a01a105966b4' },
-  { key: '12', title: 'JavaScript 进阶问题列表', author: ' LazyChenY', url: 'https://github.com/lydiahallie/javascript-questions/blob/master/README-zh_CN.md?tdsourcetag=s_pctim_aiomsg' }
+  { key: '12', title: 'JavaScript 进阶问题列表', author: ' LazyChenY', url: 'https://github.com/lydiahallie/javascript-questions/blob/master/README-zh_CN.md?tdsourcetag=s_pctim_aiomsg' },
+  {key:'13',title:'这一次，彻底弄懂 JavaScript 执行机制',author:'ssssyoki',url:'https://juejin.im/post/59e85eebf265da430d571f89?tdsourcetag=s_pctim_aiomsg'}
 ]
 
 class StudyNote extends React.Component {

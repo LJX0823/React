@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './Jsq.css';
 function Show(props) {
   return (
-    <h1>{props.show}</h1>
+    <h1 className='screen'>{props.show}</h1>
   )
 }
 class Jsq extends Component {

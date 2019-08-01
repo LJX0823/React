@@ -1,0 +1,19 @@
+.hide{
+    display: none;
+}
+.chooser_body{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -200px;
+    text-align: center;
+    
+}
+.chooser_body button{
+  font-size: 24px;
+  border: 1px;
+  color: #fff;
+}

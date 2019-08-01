@@ -7,6 +7,7 @@ import Nav from "./components/Nav/Nav.js";
 import StudeyNote from "./components/StudeyNote/StudyNote.js";
 import App from "./App.js";
 import PhoneTest from './components/PhoneTest/PhoneTest.js';
+import Chooser from "./components/Foodchooser/Chooser.js";
 import * as serviceWorker from './serviceWorker';
 
 
@@ -18,6 +19,8 @@ ReactDOM.render(
       <Route path='/Jsq' component={Jsq} />
       <Route path='/StudyNote' component={StudeyNote} />
       <Route path='/PhoneTest' component={PhoneTest} />
+      <Route path='/Chooser' component={Chooser}/>
+      
     </Router>
   </div>
   ,

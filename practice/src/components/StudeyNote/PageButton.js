@@ -40,7 +40,7 @@ class PageButton extends React.Component {
       <div className="change_page">
       
         <span className="button" onClick={this.setUp} >上一页</span>
-        <span>{this.state.pagenum}页/ {this.props.totalpage}页</span>
+        <span className='page'>{this.state.pagenum}页/ {this.props.totalpage}页</span>
         <span className="button" onClick={this.setNext}>下一页</span>
         
       </div>

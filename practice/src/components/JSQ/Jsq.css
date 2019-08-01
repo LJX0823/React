@@ -1,4 +1,4 @@
-button {
+.board button {
     width: 80px;
     height: 80px;
     font-size: 16px;
@@ -12,8 +12,7 @@ button {
     margin-right: 15px
 }
 
-
-h1 {
+.screen {
     text-align: right;
     width: 405px;
     border: solid;
