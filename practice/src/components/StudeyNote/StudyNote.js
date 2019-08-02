@@ -18,7 +18,10 @@ const studydata = [
   { key: '10', title: '更好的纯CSS滚动指示器技术实现', author: '张鑫旭', url: 'https://www.zhangxinxu.com/wordpress/2019/06/better-css-scroll-indicator/' },
   { key: '11', title: 'word-break、word-wrap、white-space', author: '顾二凡', url: 'https://juejin.im/post/5b8905456fb9a01a105966b4' },
   { key: '12', title: 'JavaScript 进阶问题列表', author: ' LazyChenY', url: 'https://github.com/lydiahallie/javascript-questions/blob/master/README-zh_CN.md?tdsourcetag=s_pctim_aiomsg' },
-  {key:'13',title:'这一次，彻底弄懂 JavaScript 执行机制',author:'ssssyoki',url:'https://juejin.im/post/59e85eebf265da430d571f89?tdsourcetag=s_pctim_aiomsg'}
+  { key: '13', title: '这一次，彻底弄懂 JavaScript 执行机制', author: 'ssssyoki', url: 'https://juejin.im/post/59e85eebf265da430d571f89?tdsourcetag=s_pctim_aiomsg' },
+  { key: '14', title: '你未必知道的49个CSS知识点', author: '老姚', url: 'https://juejin.im/post/5d3eca78e51d4561cb5dde12' },
+  { key: '15', title: 'VUE组件汇总', author: '龙逸轩', url: 'https://juejin.im/post/5af16a2cf265da0b8636353b' },
+  {key:'16',title:'Vue学习看这篇就够',author:'juejin.com',url:'https://juejin.im/entry/5a54b747518825734216c3df'}
 ]
 
 class StudyNote extends React.Component {

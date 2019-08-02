@@ -345,9 +345,9 @@ class Jsq extends Component {
             <button onClick={this.BackSpace}>Backspace</button>
           </div>
         </div>
-      
 
-    
+
+
       </div>
     )
 

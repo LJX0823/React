@@ -20,6 +20,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     color: white;
+    font-size: 2em
 }
 
 .sign4 button {
@@ -33,8 +34,12 @@
 
 .board {
     position: absolute;
-    left: 40%;
-    top: 25%;
+    width: 410px;
+    height: 410px;
+    left: 50%;
+    top: 50%;
+    margin-left: -205px;
+    margin-top: -205px;
     border: solid;
     border-color: gray;
     background: darkgray;

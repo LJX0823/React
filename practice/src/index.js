@@ -8,8 +8,8 @@ import StudeyNote from "./components/StudeyNote/StudyNote.js";
 import App from "./App.js";
 import PhoneTest from './components/PhoneTest/PhoneTest.js';
 import Chooser from "./components/Foodchooser/Chooser.js";
+import Animation from "./components/Animation/Animation.js";
 import * as serviceWorker from './serviceWorker';
-
 
 ReactDOM.render(
   <div>
@@ -20,6 +20,8 @@ ReactDOM.render(
       <Route path='/StudyNote' component={StudeyNote} />
       <Route path='/PhoneTest' component={PhoneTest} />
       <Route path='/Chooser' component={Chooser}/>
+      <Route path='/Animation' component={Animation}/>
+      
       
     </Router>
   </div>
